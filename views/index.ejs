@@ -1,0 +1,236 @@
+<!doctype html>
+<!--
+	Author by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<title>Author</title>
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar">
+  <div class="navbar-container">
+    <img src="./images/11logo.png" height="60" alt="site logo">
+
+    <ul class="navbar-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="/blog">Blogs and Articles</a></li>
+      <li><a href="/buy-copy">Buy a copy</a></li>
+	  
+    </ul>
+  </div>
+</nav>
+
+<style>
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #222; /* dark background */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Flex layout */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu list */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+/* Links */
+.navbar-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #f39c12; /* gold/orange hover effect */
+}
+</style>
+
+
+	<!-- Top banner -->
+	<section class="fh5co-top-banner">
+		<div class="top-banner__inner site-container">
+			<div class="top-banner__image">
+				<img src="./images/first.png" alt="author image">
+			</div>
+			<div class="top-banner__text">
+				<div class="top-banner__text-up">
+					<span class="brand-span" style="font-size: 30px;">Hello! </span>
+					<h6 class="top-banner__h2">Welcome to the official page of Eleven habits that kill Dream</h6>
+				</div>
+				
+				<p style="font-size: 30px;">Your journey of transformation start here</p>
+				<a href="/blog" class="brand-button">Read bio > </a>
+			</div>
+		</div>
+	</section>
+	<!-- Top banner end -->
+
+	<!-- About me -->
+	<section class="fh5co-about-me">
+		<div class="about-me-inner site-container">
+			<article class="portfolio-wrapper">
+				<div class="portfolio__img">
+					<img src="./images/pic.jpeg" class="about-me__profile" alt="about me profile picture">
+				</div>
+				<div class="portfolio__bottom">
+					<div class="portfolio__name">
+						<span></span>
+						<h2 class="universal-h2">Yohanna Musa Sunama</h2>
+					</div>
+					<p> Author, novelist, software Developer, Teacher and more.</p>
+				</div>
+			</article>
+			<div class="about-me__text">
+				<div class="about-me-slider">
+					<div class="about-me-single-slide">
+						<h2 class="universal-h2 universal-h2-bckg">About me</h2>
+						<p><span>H</span> e is an authour, software Developer, teacher and more. Seeing people become better is his passion. He is passionate about imapctful living and transformation. </p>
+						<h4>Author</h4>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-me-bckg"></div>
+	</section>
+	<!-- About me end -->
+
+	<!-- Books and CD -->
+
+	<!-- Blog -->
+	<!-- Blog -->
+<section class="fh5co-blog">
+  <div class="site-container">
+    <h2 class="universal-h2 universal-h2-bckg">My Blog</h2>
+	
+    <div class="blog-slider blog-inner">
+
+      <% blogs.forEach(blog => { %>
+        <div class="single-blog">
+          <div class="single-blog__img">
+            <img src="/images/blog1.jpg" alt="blog image"> <!-- Optional: add image field later -->
+          </div>
+          <div class="single-blog__text">
+            <h4><a href="/blog/<%= blog._id %>"><%= blog.title %></a></h4>
+            <span>On <%= blog.createdAt.toDateString() %></span>
+            <p><%= blog.content.substring(0, 120) %>...</p>
+          </div>
+        </div>
+      <% }) %>
+
+    </div>
+    <div class="books-brand-button mt-3">
+      <a href="/blog" class="brand-button">View all Blogs</a>
+    </div>
+  </div>
+</section>
+<!-- Blog end -->
+<!-- Blog end -->
+
+	<!-- Quotes -->
+	<!-- Quotes end -->
+
+	<!-- Social -->
+	<section class="fh5co-social">
+		<div class="site-container">
+			<div class="social">
+				<h5>Follow me!!</h5>
+				<div class="social-icons">
+					<a href="#" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+					<a href="#" target="_blank"><img src="./images/social-pinterest.png" alt="social icon"></a>
+					<a href="#" target="_blank"><img src="./images/social-youtube.png" alt="social icon"></a>
+					<a href="#" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+				</div>
+				<h5>Share it!</h5>
+			</div>
+		</div>
+	</section>
+	<!-- Social -->
+
+	<!-- Footer -->
+	<footer class="site-footer">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="about me image">
+						<p>Read more about me</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Get In Touch</h5>
+						<p class="footer-phone">Phone</p>
+						<p>Email : </p>
+						<div class="social-icons">
+							<a href="#" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+							<a href="#" target="_blank"><img src="./images/social-pinterest.png" alt="social icon"></a>
+							<a href="#" target="_blank"><img src="./images/social-youtube.png" alt="social icon"></a>
+							<a href="#" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Your input is valuable</h5>
+					<form class="contact-form" method="post" action="/comment">
+						<div class="contact-form__input">
+							<input type="text" name="name" placeholder="Name">
+							<input type="email" name="email" placeholder="Email">
+						</div>
+						  <!-- Extra Notes -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Additional Notes</label>
+          <textarea name="notes" rows="3" class="form-control" placeholder="Add more details (optional)..."></textarea>
+        </div>
+						<input type="submit" name="submit" value="Submit" class="submit-button">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2019 Author | Design by <a href="https://freehtml5.co/" target="_blank">11 Habits that kill Dream</a> | All rights Reserved.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="footer image">
+					<img src="./images/footer-paypal.png" alt="footer image">
+					<img src="./images/footer-visa.png" alt="footer image">
+					<img src="./images/footer-fedex.png" alt="footer image">
+					<img src="./images/footer-dhl.png" alt="footer image">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer end -->
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
